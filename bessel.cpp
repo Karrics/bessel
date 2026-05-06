@@ -75,7 +75,7 @@ map<double, BesselTableEntry> load_abramowitz_table(const string& filename) {
 }
 
 
-// 3. Вычисление функции Ханкеля
+// Вычисление функции Ханкеля
 cdouble hankel_H1(int nu, double x) {
     if (x <= 0.0) {
         return cdouble(1e30, 1e30);
@@ -167,7 +167,7 @@ ChebyshevCoeffs compute_mixed_coeffs(int nu, double a, double b, int N) {
 }
 
 
-// 8. Сравнение с таблицами и сбор статистики
+// Сравнение с таблицами и сбор статистики
 Statistics compare_with_tables_detailed(
     const map<double, BesselTableEntry>& ref_table,
     int nu, double a, double b, const ChebyshevCoeffs& coeffs,
